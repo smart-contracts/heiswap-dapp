@@ -9,7 +9,7 @@ const resolveWeb3 = (resolve, options, isBrowser) => {
     // use custom provider from options object
     provider = options.customProvider
   } else if (isBrowser && window.ethereum) {
-    // use `ethereum` object injected by MetaMask
+    // use `ethereum` object injected by MetaMask try
     provider = window.ethereum
     if (options.requestPermission) window.ethereum.enable()
   } else if (isBrowser && typeof window.web3 !== 'undefined') {
